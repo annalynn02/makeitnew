@@ -1,0 +1,238 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+/* navigation styles */
+header{
+    background: #c9d6ae;
+    text-align: right;
+    position: relative;
+    width: 100%;
+}
+.logo{
+    display: block;
+    width: 45%;
+    margin-left: auto;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+    display: block;
+    background: #565959;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label::before{
+    bottom: 40px;
+}
+.nav-toggle-label::after{
+    top: 40px;
+}
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #c9d6ae;
+    width: 100%;
+    display: none;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav a{
+    color: #565959;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+nav a:hover{
+    color: #fff;
+}
+.nav-toggle:checked ~ nav{
+    display: block;
+}
+main{
+    background: #efe8dd;
+    color: #565959;
+}
+h1{
+    background: #a59584;
+    text-align: center;
+    color: #34363c;
+    font-family: cursive;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+h2{
+    font-family: fantasy;
+    font-size: medium;
+    text-align: center;
+}
+p{
+    margin: 1em;
+}
+.home-lauradols{
+    display: flex;
+}
+li{
+    list-style: none;
+}
+main img{
+    width: 35%;
+}
+a{
+    color: #565959;
+    font-weight: bold;
+}
+a:hover{
+    color: #fff;
+}
+a:visited{
+    color: #565959;
+}
+section{
+    margin: 1em 0 1em 0;
+}
+/*foto scroller*/
+.media-scroller{
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 43%;
+    padding: 0 var(--size-3) var(--size-3) var(--size-3);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+.media-element{
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--size-2);
+    padding: var(--size-3);
+    background: var(--surface-2);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-3);
+}
+.media-element > img{
+    inline-size: 100%;
+    aspect-ratio: 10 / 12;
+    object-fit: cover;
+}
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--size-3);
+}
+.snaps-inline > *{
+    scroll-snap-align: start;
+}
+section{
+    display: flex;
+}
+section img{
+    margin: 0 2em;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    background: #a59584;
+    margin-top: 1em;
+    color: #f7f1e5;
+}
+.text-tips{
+    display: flex;
+    flex-direction: column;
+    background: #98a7bf;
+    margin: 1em 0 1em 0;
+    color: #efe8dd;
+}
+.text-tips h2{
+    text-align: center;
+    font-size: large;
+}
+.list{
+    background: #a59584;
+    color: #efe8dd;
+}
+.list li{
+    margin: 0.4em;
+    font-weight: bold;
+}
+.text-brands{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.intro-waarom{
+    display: flex;
+    flex-direction: column;
+    background-color: #a59584;
+    margin-top: 1em;
+    color: #f7f1e5;
+    text-align: center;
+    font-weight: bold;
+}
+.foto{
+    display: flex;
+}
+.milieu{
+    display: flex;
+    flex-direction: column;
+    background: #727154;
+    color: #efe8dd;
+    text-align: center;
+}
+.milieu h2{
+    text-align: end;
+    font-weight: bold;
+}
+.text-gray{
+    display: flex;
+    flex-direction: column;
+    background: #34363c;
+    color: #efe8dd;
+}
+footer{
+    background: #c9d6ae;
+    color: #565959;
+    width: 100%;
+}
+footer section{
+    display: flex;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
